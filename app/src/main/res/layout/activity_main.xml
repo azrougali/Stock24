@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_white_logo"/>
+
+    <TextView
+        android:layout_marginBottom="170dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/text"
+        android:layout_above="@id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/splach_screen_text"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/register"
+        android:background="@drawable/button1"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:elevation="7dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/text_bottom"
+        android:background="@drawable/button2"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto"
+        android:textSize="16sp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/purple_700"
+        android:elevation="7dp"/>
+
+    <TextView
+        android:id="@+id/text_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/main_text_bottom"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/6200e2cbe087a2c1d37766e335b81b1a.xml" value="0.16111111111111112" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/background.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button1.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button2.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button3.xml" value="0.162109375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button4.xml" value="0.162109375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button5.xml" value="0.162109375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/code.xml" value="0.16111111111111112" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/ic_arrow_left.xml" value="0.158984375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/ic_background.xml" value="0.16111111111111112" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/ic_stock_24_logo.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/item.xml" value="0.162109375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/text_view_1.xml" value="0.162109375" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_announcement_detail.xml" value="0.16" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_category.xml" value="0.16" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_home.xml" value="0.14" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_register.xml" value="0.67" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_splashscreen.xml" value="0.14" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/item_annonce.xml" value="0.33" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/menu/itemsmenu.xml" value="0.15" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/menu/menuadmin.xml" value="0.15" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

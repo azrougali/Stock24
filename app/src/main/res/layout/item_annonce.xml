@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/button5"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/machine_laver" />
+
+        <LinearLayout
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button5"
+            android:elevation="7dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_favoris"
+                app:tint="@color/teal_200"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="NEUF"
+            android:layout_marginBottom="10dp"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/text_view_1"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/relative"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Lot de machines à laver Samsung"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+         />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/relative"
+        android:fontFamily="@font/roboto"
+        android:text="Electroménager"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/wilaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/category"
+        android:drawableStart="@drawable/ic_map_pin"
+        android:drawablePadding="7dp"
+        android:drawableTint="@color/teal_200"
+        android:fontFamily="@font/roboto"
+        android:text="Alger"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/relative"
+        android:layout_below="@id/category"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:drawableStart="@drawable/ic_clock"
+        android:textSize="15sp"
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="15 min"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wilaya"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="45.000 DA"
+        android:textColor="@color/purple_700"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    
+    
+
+
+
+</RelativeLayout>

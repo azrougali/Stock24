@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Stock24</string>
+    <string name="splach_screen_text">Acheter/vendre des lots de produits</string>
+    <string name="login">Se connecter</string>
+    <string name="register">Créer un compte</string>
+    <string name="main_text_bottom">© 2018 Stock24</string>
+    <string name="simple">C’est vraiment simple</string>
+    <string name="choice_email">Ou avec adresse email</string>
+    <string name="register_facebook">S’inscrire avec Facebook</string>
+    <string name="connexion_info">Informations de connexion</string>
+    <string name="profil_info">Profil utilisateur</string>
+    <string name="condition">J’accepte les <u>conditions d’utilisation</u></string>
+    <string name="compte_existe">Vous avez un compte ?</string>
+    <string name="email">Adresse email</string>
+    <string name="password">Mot de passe</string>
+    <string name="name">Nom complet</string>
+    <string name="Entreprise">Entreprise</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="connect"><u>Connectez-vous</u></string>
+    <string name="moment">Juste un moment</string>
+    <string name="category">Quelles sont les catégories qui vous intéressent</string>
+    <string name="info">Sélectionnez les catégories va nous permettre de\nmieux adapter l’expérience utilisateur de l’application celon votre chois</string>
+    <string name="passer">Passer</string>
+    <string name="next">Continuer</string>
+    <string name="Accueil">Accueil</string>
+    <string name="Favoris">Favoris</string>
+    <string name="Notifications">Notifications</string>
+    <string name="Profil">Profil</string>
+    <string name="all">All</string>
+    <string name="Plus_récents">Plus récents en premier</string>
+
+
+</resources>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmenHome.announcement_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:elevation="7dp"
+        >
+
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:elevation="7dp"
+          >
+
+            <ImageView
+                android:id="@+id/arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_arrow_left" />
+
+            <ImageView
+                android:id="@+id/groupe"
+                android:layout_width="wrap_content"
+                android:padding="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_groupe_125"
+                android:layout_alignParentEnd="true"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/groupe"
+                android:layout_toRightOf="@id/arrow_left"
+                android:paddingHorizontal="60dp"
+                android:paddingVertical="20dp"
+                android:src="@drawable/ic_white_logo" />
+        </RelativeLayout>
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"
+            android:background="@drawable/machine"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:text="IL Y A UNE HEURE"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:id="@+id/localisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_toRightOf="@id/time"
+            android:drawableLeft="@drawable/ic_map_pin"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/teal_200"
+            android:fontFamily="@font/roboto"
+            android:text="Alger"
+            android:textColor="@color/teal_200"
+            android:textSize="15sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_favoris"
+                app:tint="@color/teal_200"
+                android:layout_marginRight="30dp"
+                />
+        
+        
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Lot de machines à laver"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/teal_200"
+            android:fontFamily="@font/roboto"
+            android:text="Electroménager / Machine à laver"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etat"
+                android:textSize="15sp"
+                android:textColor="@color/teal_200"
+                android:fontFamily="@font/roboto"
+                />
+
+            <TextView
+                android:id="@+id/etat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/text_view_1"
+                android:text="Neuf"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:fontFamily="@font/roboto"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantité"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/teal_200"
+                android:fontFamily="@font/roboto"
+                />
+
+            <TextView
+                android:id="@+id/quantité"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/text_view_1"
+                android:text="Neuf"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:fontFamily="@font/roboto"
+                />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp">
+
+     <TextView
+         android:id="@+id/price"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="45.000 DA"
+         android:textColor="@color/purple_700"
+         android:fontFamily="@font/roboto"
+         android:textStyle="bold"
+         android:textSize="18sp"/>
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lot complet"
+            android:textColor="@color/purple_700"
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="01dp"
+        android:background="@color/teal_200"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="#3D3C43"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Machine à laver HS. Elle ne s’enclenche plus. Machine à laver a réparer ou pour pièces
+
+- Lave-linge 10.5 KG
+- Séchage 7 KG
+- Moteur Direct Drive™
+- 6 Motion DD
+- Ajout de linge
+- Smart Diagnosis ™ | TrueSteam ™ | Smart ThinQ™"
+        android:textColor="#3D3C43"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto"/>
+
+    <View
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="01dp"
+        android:background="@color/teal_200"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A propos de l’annonceur"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="#3D3C43"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
