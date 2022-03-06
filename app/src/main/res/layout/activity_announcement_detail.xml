@@ -8,6 +8,15 @@
     android:orientation="vertical"
     tools:context=".Fragment.FragmenHome.announcement_detail">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="230dp"
@@ -74,19 +83,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         >
-        
+
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/teal_200"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
-            android:textSize="15sp"
+            android:fontFamily="@font/roboto"
             android:text="IL Y A UNE HEURE"
             android:textAllCaps="true"
-            android:fontFamily="@font/roboto"
-            android:layout_alignParentStart="true"
-            />
+            android:textColor="#3D3C43"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/localisation"
@@ -96,10 +104,10 @@
             android:layout_toRightOf="@id/time"
             android:drawableLeft="@drawable/ic_map_pin"
             android:drawablePadding="10dp"
-            android:drawableTint="@color/teal_200"
+            android:drawableTint="#3D3C43"
             android:fontFamily="@font/roboto"
             android:text="Alger"
-            android:textColor="@color/teal_200"
+            android:textColor="#3D3C43"
             android:textSize="15sp" />
             <ImageView
                 android:layout_width="wrap_content"
@@ -119,7 +127,7 @@
         android:fontFamily="@font/roboto_medium"
         android:text="Lot de machines à laver"
         android:textColor="@color/black"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="7dp"
         android:layout_marginStart="20dp"
         android:textSize="22sp"/>
 
@@ -127,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="4dp"
             android:textSize="15sp"
             android:textColor="@color/teal_200"
             android:fontFamily="@font/roboto"
@@ -178,10 +186,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:background="@drawable/text_view_1"
-                android:text="Neuf"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:background="@drawable/text_view_2"
+                android:text="25 Unités"
+                android:textColor="#3D3C43"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="3dp"
                 android:fontFamily="@font/roboto"
@@ -222,7 +229,7 @@
 
     <View
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="01dp"
         android:background="@color/teal_200"/>
@@ -257,7 +264,7 @@
 
     <View
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="01dp"
         android:background="@color/teal_200"/>
@@ -274,6 +281,133 @@
         android:layout_marginTop="10dp"/>
 
 
+    <RelativeLayout
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_view_2"
+        >
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:src="@drawable/image_profile" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile"
+            android:layout_marginTop="6dp"
+            android:text="Mohamed Bendiab"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/profile"
+            android:drawableLeft="@drawable/ic_map_pin"
+            android:drawablePadding="7dp"
+            android:drawableTint="@color/teal_200"
+            android:fontFamily="@font/roboto"
+            android:text="Alger, Draria"
+            android:textColor="#3D3C43"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_2"
+            android:elevation="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:elevation="7dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+               >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#3D3C43"
+                android:text="mohamed.bendiab@gmail.com"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_2"
+            android:elevation="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:elevation="7dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#3D3C43"
+                android:text="0560 45 45 64 "
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto"/>
 
 
 
@@ -282,5 +416,24 @@
 
 
 
+        </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button1"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:text="Demmander"
+            android:textSize="17sp"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"/>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

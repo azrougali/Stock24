@@ -1,9 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/relativelayout"
     tools:context=".login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/background_login"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_margin="20dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_white_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/Connectez"
+            android:fontFamily="@font/roboto"
+            android:layout_marginBottom="40dp"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+       >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_number"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:layout_marginTop="40dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:gravity="bottom"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/firstPinView"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button2"
+            android:elevation="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/code_de_confirmation"
+            android:textAllCaps="false"
+            android:visibility="visible" />
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/firstPinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_number"
+            android:layout_marginTop="30dp"
+            android:cursorVisible="true"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="42dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:cursorColor="@color/teal_200"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="6"
+            app:itemHeight="50dp"
+            app:itemRadius="4dp"
+            app:itemSpacing="3dp"
+            app:itemWidth="50dp"
+            app:lineColor="@color/teal_200"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/send_code"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button2"
+            android:elevation="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/Connectez"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/connect"
+        android:layout_below="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:text="@string/Connexion"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/button1"
+        android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/facebook_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/connect"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_facebook"
+            android:text="@string/register_facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            android:drawableLeft="@drawable/ic_facebook_icone"/>
+
+        <com.google.android.gms.common.SignInButton
+
+            android:id="@+id/gmail_login"
+            android:layout_below="@id/facebook_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:elevation="3dp"
+            android:layout_marginTop="10dp"
+
+            />
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:background="#FAFAFA"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/newaccount"
+            android:textColor="#3D3C43" />
+
+        <TextView
+            android:id="@+id/to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/register_underline"
+            android:textColor="@color/purple_200"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+

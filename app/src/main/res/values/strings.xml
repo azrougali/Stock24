@@ -1,11 +1,16 @@
 <resources>
+
+    <string name="facebook_app_id">476378967200973</string>
+    <string name="fb_login_protocol_scheme">fb476378967200973</string>
+
+
     <string name="app_name">Stock24</string>
     <string name="splach_screen_text">Acheter/vendre des lots de produits</string>
     <string name="login">Se connecter</string>
     <string name="register">Créer un compte</string>
     <string name="main_text_bottom">© 2018 Stock24</string>
     <string name="simple">C’est vraiment simple</string>
-    <string name="choice_email">Ou avec adresse email</string>
+    <string name="choice_phone">Ou avec numéro de télephone</string>
     <string name="register_facebook">S’inscrire avec Facebook</string>
     <string name="connexion_info">Informations de connexion</string>
     <string name="profil_info">Profil utilisateur</string>
@@ -14,12 +19,13 @@
     <string name="email">Adresse email</string>
     <string name="password">Mot de passe</string>
     <string name="name">Nom complet</string>
-    <string name="Entreprise">Entreprise</string>
+    <string name="company">Entreprise</string>
     <string name="phone_number">Numéro de téléphone</string>
     <string name="connect"><u>Connectez-vous</u></string>
+    <string name="Connectez">Connectez-vous</string>
     <string name="moment">Juste un moment</string>
     <string name="category">Quelles sont les catégories qui vous intéressent</string>
-    <string name="info">Sélectionnez les catégories va nous permettre de\nmieux adapter l’expérience utilisateur de l’application celon votre chois</string>
+    <string name="info">Sélectionnez les catégories va nous \npermettre de mieux adapter l’expérience utilisateur de l’application celon votre chois</string>
     <string name="passer">Passer</string>
     <string name="next">Continuer</string>
     <string name="Accueil">Accueil</string>
@@ -28,6 +34,36 @@
     <string name="Profil">Profil</string>
     <string name="all">All</string>
     <string name="Plus_récents">Plus récents en premier</string>
+    <string name="new_annonce">Nouvelle annonce</string>
+    <string name="suivant">Suivant</string>
+    <string name="add_image">Ajouter des images</string>
+    <string name="title">Titre</string>
+    <string name="descreption">Insérer une description..</string>
+    <string name="categorie">Catégorie</string>
+    <string name="localisation">Localisation</string>
+    <string name="etat">Etat</string>
+    <string name="Quantité">Quantité</string>
+    <string name="price">prix</string>
+    <string name="price_to">Prix pour:</string>
+    <string name="Lot_complet">Lot complet</string>
+    <string name="Unité">Unité</string>
+    <string name="Connexion">Connexion</string>
+    <string name="code_de_confirmation">Envoyé le code de confirmation</string>
+    <string name="newaccount">Vous êtes nouveau ?</string>
+    <string name="register_underline"><u>Créer un compte</u></string>
+    <string name="contact_info">Informations de contact</string>
+    <string name="use_profile_data">Utiliser les cordonnées de mon profil</string>
+    <string name="other_data">Utiliser des cordonnées personnalisées </string>
+    <string name="create_account">créer votre compte avant </string>
+
+
+    <string name="toast_email">Saisissez un email valide</string>
+    <string name="toast_name">Saisissez votre nom</string>
+    <string name="toast_phone">Saisissez un numéro de télphone valide</string>
+    <string name="toast_checkbox">Accepter les conditions d’utilisation</string>
+    <string name="toast_pinview">Entrer votre code de confirmation</string>
+    <string name="toast_phone_number">Vérifier votre numéro de télephone</string>
+    <string name="email_verfication">Vérifier votre boîte mail</string>
 
 
 </resources>

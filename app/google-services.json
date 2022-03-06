@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "794921544539",
+    "project_id": "stock24-4c8db",
+    "storage_bucket": "stock24-4c8db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794921544539:android:0af0f58dffa7876810487e",
+        "android_client_info": {
+          "package_name": "com.stock24_dz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794921544539-o5h4al348vau5hggd0jtro380iclun7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stock24_dz",
+            "certificate_hash": "1e7c3980b573549632472773cfc3fb49069aece9"
+          }
+        },
+        {
+          "client_id": "794921544539-bqqr7kpvifbcaolqm19616imsvfllgr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrC3S4QPsETXHKBfqD-vL-s_XB4wTVB0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794921544539-bqqr7kpvifbcaolqm19616imsvfllgr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -38,7 +38,7 @@
                 android:layout_height="match_parent"
                 app:backgroundTint="@color/white"
 
-                app:menu="@menu/itemsmenu"
+                app:menu="@menu/items_menu"
                 app:theme="@style/menu_text_style"
 
 
