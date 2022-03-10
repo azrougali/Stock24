@@ -47,12 +47,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.stock24_dz.Adapter.adapter_category;
+import com.stock24_dz.Model.category_model;
 import com.stock24_dz.Model.user_model;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
@@ -69,12 +74,9 @@ public class register extends AppCompatActivity {
     ImageView arrow_left;
     TextInputEditText email,name,company,phone;
     CheckBox checkBox;
-    String s_name,s_email,s_company,s_phone,s_pin;
+    String s_name,s_email,s_company,s_phone;
     private View baseView;
     PinView pinView;
-    String verificationbysystem;
-    PhoneAuthProvider.ForceResendingToken token;
-    String user_id;
     Boolean auth=false;
     FirebaseUser user;
     FirebaseAuth firebaseAuth;
@@ -82,8 +84,7 @@ public class register extends AppCompatActivity {
     private CallbackManager callbackManager;
     String acces_token,profile_picture,f_name,f_email,facebook_id;
     private LoginButton loginButton;
-    private FirebaseAuth.AuthStateListener firebaseAuthListener;
-    private String verificationId;
+
 
 
 
@@ -109,8 +110,9 @@ public class register extends AppCompatActivity {
         pinView=findViewById(R.id.firstPinView);
         loginButton=(LoginButton)findViewById(R.id.facebook_login);
 
-        user=FirebaseAuth.getInstance().getCurrentUser();
         firebaseAuth =FirebaseAuth.getInstance();
+        user=firebaseAuth.getCurrentUser();
+
 
         service = RetrofitService.getRetrofitService().create(ApiInterface.class);
         callbackManager = CallbackManager.Factory.create();
@@ -216,23 +218,9 @@ public class register extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
     private void handleFacebookAccessToken(AccessToken accessToken) {
         loginButton.setVisibility(View.GONE);
-
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseAuth.signInWithCredential(credential)
@@ -242,11 +230,28 @@ public class register extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            adduser_facebook(user);
+                            String firebase_id=user.getUid();
+                            Call<user_model> call=service.getUserById(firebase_id);
+                            call.enqueue(new Callback<user_model>() {
+                                @Override
+                                public void onResponse(Call<user_model> call, Response<user_model> response) {
+                                    if (response.isSuccessful()) {
+                                       if (response.body()==null){
+                                           adduser_facebook(user);
+                                       }else {
+                                           Snackbar snackbar1 = Snackbar.make(baseView,R.string.account_existe, Snackbar.LENGTH_SHORT);
+                                           snackbar1.show();
+                                       }
+                                    }
+                                }
+                                @Override
+                                public void onFailure(Call<user_model> call, Throwable t) {
+                                    Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
+                                }
+                            });
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(register.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                             adduser_facebook(null);
                         }
                     }
@@ -266,24 +271,19 @@ public class register extends AppCompatActivity {
         user_model.setSubscribed(0);
         user_model.setFacebook_id(facebook_id);
         user_model.setFacebook_access_token(acces_token);
-
         Call<user_model> call=service.CreateUser(user_model);
         call.enqueue(new Callback<user_model>() {
             @Override
             public void onResponse(Call<user_model> call, Response<user_model> response) {
-                Intent intent=new Intent(getApplicationContext(),category.class);
+                Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
                 startActivity(intent);
-
             }
-
             @Override
             public void onFailure(Call<user_model> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_SHORT).show();
-
             }
         });
     }
-
 
     private boolean isEmailValid(String s_email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(s_email).matches();
@@ -308,7 +308,6 @@ public class register extends AppCompatActivity {
             }
         }
     }
-
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         firebaseAuth =FirebaseAuth.getInstance();
@@ -319,8 +318,29 @@ public class register extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            adduser_gmail(user);
-                        } else {
+                            String firebase_id=user.getUid();
+                            Call<user_model> call=service.getUserById(firebase_id);
+                            call.enqueue(new Callback<user_model>() {
+                                @Override
+                                public void onResponse(Call<user_model> call, Response<user_model> response) {
+                                    if (response.isSuccessful()) {
+                                        if (response.body()==null){
+                                            adduser_gmail(user);
+                                        }else {
+                                            Snackbar snackbar1 = Snackbar.make(baseView,R.string.account_existe, Snackbar.LENGTH_SHORT);
+                                            snackbar1.show();
+                                        }
+                                    }
+                                }
+                                @Override
+                                public void onFailure(Call<user_model> call, Throwable t) {
+                                    Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
+                                }
+                            });
+
+                        }
+                        else {
+
                             // If sign in fails, display a message to the user.
                             adduser_gmail(null);
                         }
@@ -333,27 +353,23 @@ public class register extends AppCompatActivity {
         user_model.setEmail(user.getEmail());
         user_model.setFirst_name(user.getDisplayName());
         user_model.setPrimary_phone_number(user.getPhoneNumber());
-        user_model.setBadge("silver");
-        user_model.setUser_type("user");
+        user_model.setBadge("");
         user_model.setApproved(0);
-        user_model.setAuto_approve_future_announcements(0);
         user_model.setSubscribed(0);
+        user_model.setAuto_approve_future_announcements(0);
+        user_model.setUser_type("user");
         user_model.setProfile_image(user.getPhotoUrl().toString());
-        user_model.setFirebase_id(firebaseAuth.getCurrentUser().getUid());
-
+        user_model.setFirebase_id(user.getUid());
         Call<user_model> call=service.CreateUser(user_model);
         call.enqueue(new Callback<user_model>() {
             @Override
             public void onResponse(Call<user_model> call, Response<user_model> response) {
                 Intent intent=new Intent(getApplicationContext(),category.class);
                 startActivity(intent);
-
             }
-
             @Override
             public void onFailure(Call<user_model> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_SHORT).show();
-
             }
         });
     }

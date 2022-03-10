@@ -15,7 +15,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.stock24_dz.Adapter.adapter_category;
 import com.stock24_dz.Model.category_model;
 import com.stock24_dz.Model.user_interest;
-import com.stock24_dz.Model.user_model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +82,7 @@ public class category extends AppCompatActivity {
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),home.class);
+                Intent intent=new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
             }
         });

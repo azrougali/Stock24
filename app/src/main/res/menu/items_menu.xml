@@ -4,34 +4,24 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home"
-        android:title="@string/Accueil"
+        android:title="@string/Accueil" />
 
-       />
     <item
         android:id="@+id/favoris"
         android:icon="@drawable/ic_favoris"
-        android:title="@string/Favoris"
+        android:title="@string/Favoris" />
 
-        />
-
-    <item android:id="@+id/placeholder"
+    <item
+        android:id="@+id/placeholder"
         android:title="" />
-
 
     <item
         android:id="@+id/notif"
         android:icon="@drawable/ic_notification"
-        android:title="@string/Notifications"
-
-
-        />
-
+        android:title="@string/Notifications" />
 
     <item
         android:id="@+id/profil"
         android:icon="@drawable/ic_user"
-        android:title="@string/Profil"
-
-        />
-
+        android:title="@string/Profil" />
 </menu>

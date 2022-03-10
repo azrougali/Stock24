@@ -64,6 +64,11 @@
     <string name="toast_pinview">Entrer votre code de confirmation</string>
     <string name="toast_phone_number">Vérifier votre numéro de télephone</string>
     <string name="email_verfication">Vérifier votre boîte mail</string>
+    <string name="account_existe">Votre compte existe déja</string>
+    <string name="profil">Profil</string>
+    <string name="about">A propos</string>
+    <string name="termes_amp_conditions"><![CDATA[Termes & conditions]]></string>
+    <string name="feedback">Feedback</string>
 
 
 </resources>

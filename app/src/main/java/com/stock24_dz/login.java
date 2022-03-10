@@ -6,8 +6,6 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -171,7 +169,7 @@ public class login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     if (firebaseAuth.getCurrentUser().isEmailVerified()) {
-                        Intent intent = new Intent(getApplicationContext(), home.class);
+                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                         startActivity(intent);
                     }else {
                         Snackbar snackbar1 = Snackbar.make(baseView, R.string.create_account, Snackbar.LENGTH_SHORT);
@@ -189,7 +187,7 @@ public class login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     if (firebaseAuth.getCurrentUser().isEmailVerified()) {
-                        Intent intent = new Intent(getApplicationContext(), home.class);
+                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                         startActivity(intent);
                     }else {
                         Snackbar snackbar1 = Snackbar.make(baseView, R.string.create_account, Snackbar.LENGTH_SHORT);

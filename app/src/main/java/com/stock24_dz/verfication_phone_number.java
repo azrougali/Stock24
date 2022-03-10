@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,6 +20,8 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.stock24_dz.Model.user_model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
@@ -33,6 +36,9 @@ public class verfication_phone_number extends AppCompatActivity {
     PhoneAuthProvider.ForceResendingToken token;
     FirebaseAuth firebaseAuth;
     ApiInterface service;
+    private View baseView;
+
+
 
 
     @Override
@@ -42,6 +48,8 @@ public class verfication_phone_number extends AppCompatActivity {
 
         pinView=findViewById(R.id.firstPinView);
         register=findViewById(R.id.register);
+        baseView=findViewById(R.id.linearlayout);
+
 
         name=getIntent().getStringExtra("name");
         email=getIntent().getStringExtra("email");
@@ -111,21 +119,38 @@ public class verfication_phone_number extends AppCompatActivity {
 
         }
     };
-
     private void signinuserbycredential(PhoneAuthCredential phoneAuthCredential) {
         final FirebaseAuth firebaseAuth =FirebaseAuth.getInstance();
         firebaseAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(verfication_phone_number.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    adduser();
+                    String firebase_id=firebaseAuth.getCurrentUser().getUid();
+                    Call<user_model> call=service.getUserById(firebase_id);
+                    call.enqueue(new Callback<user_model>() {
+                        @Override
+                        public void onResponse(Call<user_model> call, Response<user_model> response) {
+                            if (response.isSuccessful()) {
+                                if (response.body()==null){
+                                    adduser();
+                                }else {
+                                    Snackbar snackbar1 = Snackbar.make(baseView,R.string.account_existe, Snackbar.LENGTH_SHORT);
+                                    snackbar1.show();
+                                }
+                            }
+                        }
+                        @Override
+                        public void onFailure(Call<user_model> call, Throwable t) {
+                            Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
+                        }
+                    });
+
                 }else {
                     Toast.makeText(verfication_phone_number.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-
     private void adduser() {
         com.stock24_dz.Model.user_model user_model =new user_model();
         user_model.setEmail(email);
@@ -146,13 +171,10 @@ public class verfication_phone_number extends AppCompatActivity {
             public void onResponse(Call<user_model> call, Response<user_model> response) {
                 Intent intent=new Intent(getApplicationContext(),category.class);
                 startActivity(intent);
-
             }
-
             @Override
             public void onFailure(Call<user_model> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_SHORT).show();
-
             }
         });
     }
