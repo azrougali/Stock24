@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:background="@color/white"
         android:elevation="5dp"
         android:orientation="horizontal"
@@ -22,13 +22,14 @@
             android:layout_height="25dp"
             android:src="@drawable/ic_arrow_left"
             app:tint="@color/purple_700"
+            android:padding="5dp"
             android:layout_marginStart="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/about"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:layout_marginStart="30dp"
             android:textColor="@color/purple_700"
             android:fontFamily="@font/roboto"

@@ -13,6 +13,7 @@
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button5.xml" value="0.162109375" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button6.xml" value="0.150390625" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button7.xml" value="0.1505" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/button8.xml" value="0.1455" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/circle.xml" value="0.162109375" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/circle2.xml" value="0.162109375" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/drawable/circle3.xml" value="0.1" />
@@ -30,14 +31,18 @@
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_about.xml" value="0.2" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_announcement_detail.xml" value="0.17" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_category.xml" value="0.16" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_edit_profile.xml" value="0.18" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_feedback.xml" value="0.25" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_home.xml" value="0.14" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_login_facebook.xml" value="0.1" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_privacy_policy.xml" value="0.2" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_splashscreen.xml" value="0.14" />
+        <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_terms.xml" value="0.33" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_verfication_phone_number.xml" value="0.21" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/activity_verfification_phone_number.xml" value="0.15" />
         <entry key="..\:/Users/thinkpad/AndroidStudioProjects/Stock24/app/src/main/res/layout/fragment_annonce.xml" value="0.22" />

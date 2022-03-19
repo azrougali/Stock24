@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Fragment.FragmentProfil.Activity_Terms">
+    tools:context=".Fragment.FragmentProfil.Activity_Terms"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:background="@color/white"
         android:elevation="5dp"
         android:orientation="horizontal"
@@ -19,6 +20,7 @@
             android:id="@+id/back"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:padding="5dp"
             android:src="@drawable/ic_arrow_left"
             app:tint="@color/purple_700"
             android:layout_marginStart="16dp"/>
@@ -27,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/termes_amp_conditions"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:layout_marginStart="30dp"
             android:textColor="@color/purple_700"
             android:fontFamily="@font/roboto"

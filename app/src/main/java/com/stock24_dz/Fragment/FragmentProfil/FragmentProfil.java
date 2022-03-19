@@ -25,9 +25,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FragmentProfil extends Fragment {
-    TextView name,email,to_profile,to_announce,to_setting,to_about,to_terms,to_privacy_policy,to_feedback,logout;
-    AppCompatButton profile;
-    ImageView profileImage;
+    TextView name,email,profile,to_announce,to_setting,to_about,to_terms,to_privacy_policy,to_feedback,logout;
+    AppCompatButton to_edit_profile;
+    ImageView profileImage,settings;
     FirebaseAuth firebaseAuth;
     String firebase_id,s_image;
     ApiInterface service;
@@ -46,18 +46,20 @@ public class FragmentProfil extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         name=view.findViewById(R.id.name);
         email=view.findViewById(R.id.email);
-        to_profile=view.findViewById(R.id.profil);
+        to_edit_profile=view.findViewById(R.id.to_edit_profile);
         to_announce=view.findViewById(R.id.annonce);
         to_setting=view.findViewById(R.id.setting);
         to_about=view.findViewById(R.id.about);
         to_terms=view.findViewById(R.id.terme);
         to_privacy_policy=view.findViewById(R.id.politique);
         to_feedback=view.findViewById(R.id.feedback);
+        settings=view.findViewById(R.id.settings);
+
         logout=view.findViewById(R.id.logout);
         profile=view.findViewById(R.id.to_profile);
         profileImage=view.findViewById(R.id.profileImage);
-        firebaseAuth=FirebaseAuth.getInstance();
-        firebase_id=firebaseAuth.getCurrentUser().getUid();
+   //     firebaseAuth=FirebaseAuth.getInstance();
+     //   firebase_id=firebaseAuth.getCurrentUser().getUid();
 
         to_about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,25 @@ public class FragmentProfil extends Fragment {
                 startActivity(intent);
             }
         });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(),ActivityProfile.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        to_edit_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(),ActivityEditProfile.class);
+                startActivity(intent);
+            }
+        });
+
 
         to_feedback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +107,24 @@ public class FragmentProfil extends Fragment {
         });
 
 
+        to_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(), Activity_settings.class);
+                startActivity(intent);
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(), Activity_settings.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +133,6 @@ public class FragmentProfil extends Fragment {
         });
 
         service = RetrofitService.getRetrofitService().create(ApiInterface.class);
-
         Call<user_model> call=service.getUserById("BmpoKMfYEaWo1IhgxDznI5hbpxi1");
         call.enqueue(new Callback<user_model>() {
             @Override

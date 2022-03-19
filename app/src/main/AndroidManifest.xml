@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stock24">
         <activity
+            android:name=".Fragment.FragmentProfil.ActivityProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentProfil.ActivityEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentProfil.Activity_settings"
+            android:exported="false" />
+        <activity
             android:name=".Fragment.FragmentProfil.Feedback"
             android:exported="false" />
         <activity

@@ -69,6 +69,10 @@
     <string name="about">A propos</string>
     <string name="termes_amp_conditions"><![CDATA[Termes & conditions]]></string>
     <string name="feedback">Feedback</string>
+    <string name="settings">Parametres</string>
+    <string name="edit_profile">Modifier profil</string>
+    <string name="edit">Modifier</string>
+    <string name="edit_image">Modifier l’image</string>
 
 
 </resources>
